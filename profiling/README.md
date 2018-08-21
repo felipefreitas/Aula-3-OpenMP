@@ -1,6 +1,8 @@
 <!-- TODO:  -->
-# Aulas da disciplina Laboratório de Introdução à Programação Paralela 
-### Ementa: Práticas em laboratório para introdução aos conceitos básicos de programação paralela. Modelos e ambientes para programação paralela. Corretude da execução concorrente em sistemas de memória compartilhada. Técnicas de paralelização. Algoritmos paralelos. Avaliação de desempenho em computação paralela. 
+Nesse exercício vamos implementar um algoritmo de multiplicação de matrizes quadradas.
+- Crie um gráfico de tempo de execução e speedup para diferentes tamaños da entrada. 
+- Repita usando escalonamento dinâmico e tente explicar qual a causa da diferença no desempenho.
+- Depois, você deve inserir as diretivas OpenMP apropriadas para paralelizar o código. 
 
 ### Profiling ###
 
