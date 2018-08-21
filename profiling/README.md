@@ -3,9 +3,6 @@
 ### Ementa: Práticas em laboratório para introdução aos conceitos básicos de programação paralela. Modelos e ambientes para programação paralela. Corretude da execução concorrente em sistemas de memória compartilhada. Técnicas de paralelização. Algoritmos paralelos. Avaliação de desempenho em computação paralela. 
 
 ### Profiling ###
-In many cases, a fairly small portion of your software is responsible for the majority of the performance and scalability shortfall. However, developers are notoriously unable to identify the actual bottlenecks by hand. For ex- ample, in the case of a kernel buffer allocator, all attention focused on a search of a dense array which turned out to represent only a few percent of the allocator’s execution time. An execution profile collected via a logic analyzer focused attention on the cache misses that were actually responsible for the majority of the problem [MS93].
-An old-school but quite effective method of tracking down performance and scalability bugs is to run your program under a debugger, then periodically interrupt it, recording the stacks of all threads at each interruption. The theory here is that if something is slowing down your program, it has to be visible in your threads’ executions.
-That said, there are a number of tools that will usually do a much better job of helping you to focus your atten- tion where it will do the most good. Two popular choices are gprof and perf. To use perf on a single-process program, prefix your command with perf record, then after the command completes, type perf report. There is a lot of work on tools for performance debugging of multi-threaded programs, which should make this impor- tant job easier. Again, one good starting point is Brendan Gregg’s blog.15
 
 Extração do perfil da execução de um programa 
 Pode incluir, por exemplo: 
@@ -20,6 +17,10 @@ Técnica: Amostragem
   interrupção periódica do programa para coleta de dados sobre a execução 
   tende a ser pouco intrusiva 
   menos precisa 
+  
+Do livro: 
+Em muitos casos, uma parte relativamente pequena de seu software é responsável pela maior parte do déficit de desempenho e escalabilidade. No entanto, identificar os gargalos reais podem ser difícil sem uma ferramenta adequada. Por exemplo, no caso de um alocador de buffer do kernel, toda a atenção se concentrou na busca de um array denso que acabou representando apenas alguns por cento do tempo de execução do alocador. Um perfil de execução coletado por meio de um analisador lógico focou a atenção nas falhas de cache que eram realmente responsáveis **pela maior parte do problema [MS93]**. Um método antigo, mas bastante eficaz, de rastrear bugs de desempenho e escalabilidade é executar o programa em um depurador e, em seguida, interrompê-lo periodicamente, registrando as pilhas de todos os threads em cada interrupção. A teoria aqui é que, se algo está atrasando o seu programa, ele deve estar visível nas execuções dos seus threads. Dito isso, há uma série de ferramentas que normalmente farão um trabalho muito melhor de ajudar você a focar sua atenção onde ela fará mais bem. Duas escolhas populares são gprof e perf. Para usar perf em um programa de processo único, prefixe seu comando com o registro perf e, depois que o comando for concluído, digite o relatório perf. Há muito trabalho em ferramentas para depuração de desempenho de programas multiencadeados, o que deve facilitar esse trabalho importante. Pontos de partida: 
+
 https://www.embarcados.com.br/desempenho-gnu-profiler-gprof/
 https://stackoverflow.com/questions/6328673/which-is-the-most-reliable-profiling-tool-gprof-or-kcachegrind
 https://www.thegeekstuff.com/2012/08/gprof-tutorial/
