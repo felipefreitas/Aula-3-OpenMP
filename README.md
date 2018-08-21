@@ -40,3 +40,24 @@ distribution mode of the iterations. Propose
 an explanation for the difference in performance observed.
 
 https://ava.cefetmg.br/pluginfile.php/8569/mod_resource/content/1/Intro_To_OpenMP_Mattson.pdf
+
+Profiling
+Extração do perfil da execução de um programa 
+Pode incluir, por exemplo: 
+Tempo gasto na execução do programa inteiro e de cada subprograma 
+Número de chamadas de funções ou métodos 
+Grafo de chamadas: Diagrama espaço-tempo (diagrama de Gantt) 
+Técnica: Instrumentação 
+  adição de instruções no programa para coleta de dados sobre a execução 
+  pode ser muito intrusiva 
+  mais precisa 
+Técnica: Amostragem 
+  interrupção periódica do programa para coleta de dados sobre a execução 
+  tende a ser pouco intrusiva 
+  menos precisa 
+
+Afinidade
+Thread affinity restricts execution of certain threads (virtual execution units) to a subset of the physical processing units in a multiprocessor computer. Depending upon the topology of the machine, thread affinity can have a dramatic effect on the execution speed of a program.
+This minimizes thread migration and context-switching cost among cores. It also improves the data locality and reduces the cache-coherency traffic among the cores (or processors).
+The Intel® OpenMP* runtime library has the ability to bind OpenMP threads to physical processing units. The interface is controlled using the KMP_AFFINITY environment variable
+
