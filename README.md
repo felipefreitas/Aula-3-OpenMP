@@ -29,21 +29,12 @@ int i;
 
 ```
 
-Insert the appropriate OpenMP directives in the
-
-files 
-2. Analyse the code performance and plot the speedup curves o
-btained.
-3. Repeat this but use the
-DYNAMIC
-distribution mode of the iterations. Propose
-an explanation for the difference in performance observed.
-
 [Vamos no slide 55 da Intro to OpenMP](./Intro_To_OpenMP_Mattson.pdf)
 
 ## Afinidade / AFFINITY ##
 A afinidade de threads (Thread affinity ) restringe a execução de determinadas threads (unidades de execução virtual) a um subconjunto das unidades de processamento físico em um computador com multiprocessador. Dependendo da topologia da máquina, a afinidade de threads pode ter um efeito dramático na velocidade de execução de um programa.
 Isso minimiza a migração de threads e o custo da troca de contexto entre os núcleos (cores). Ela também melhora a localidade dos dados e reduz o tráfego de coerência de cache entre os núcleos (ou processadores).
-Intel® OpenMP tem a capacidade de vincular (bind) threads OpenMP a unidades de processamento físico. A interface é controlada usando a variável de ambiente KMP_AFFINITY.
+OpenMP tem a capacidade de vincular (bind) threads OpenMP a unidades de processamento físico. A interface é controlada usando uma variável de ambiente cujo nome depende do compilador em uso. Ex. para Intel use KMP_AFFINITY.
+https://gcc.gnu.org/onlinedocs/libgomp/GOMP_005fCPU_005fAFFINITY.html#GOMP_005fCPU_005fAFFINITY
 
-
+Exercício: [Multiplicação de matrizes](./profiling)
