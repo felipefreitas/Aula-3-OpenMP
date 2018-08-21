@@ -20,3 +20,8 @@ Técnica: Amostragem
   interrupção periódica do programa para coleta de dados sobre a execução 
   tende a ser pouco intrusiva 
   menos precisa 
+https://www.embarcados.com.br/desempenho-gnu-profiler-gprof/
+https://stackoverflow.com/questions/6328673/which-is-the-most-reliable-profiling-tool-gprof-or-kcachegrind
+https://www.thegeekstuff.com/2012/08/gprof-tutorial/
+http://gernotklingler.com/blog/gprof-valgrind-gperftools-evaluation-tools-application-level-cpu-profiling-linux/
+https://perf.wiki.kernel.org/index.php/Tutorial#Benchmarking_with_perf_bench
