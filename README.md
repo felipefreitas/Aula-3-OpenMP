@@ -133,6 +133,7 @@ void main()
 	}
 }
 ```
+Exercício: modifique o programa da aula anterior para evitar condições de corrida
 
 
 [Vamos no slide 55 da Intro to OpenMP](./Intro_To_OpenMP_Mattson.pdf)
