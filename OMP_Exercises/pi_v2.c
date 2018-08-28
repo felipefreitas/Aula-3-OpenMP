@@ -1,3 +1,5 @@
+// THIS IS A SPMD DESIGN PATTERN IMPLEMENTED FOR PI PROGRAM
+
 #include <stdio.h>
 #include <omp.h>
 static long num_steps = 1000000;
