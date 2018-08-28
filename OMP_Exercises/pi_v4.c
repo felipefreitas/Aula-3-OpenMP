@@ -1,4 +1,4 @@
-// THIS IS A SPMD DESIGN PATTERN IMPLEMENTED FOR PI PROGRAM - BUT WITH FALSE SHARING
+// THIS IS A SPMD DESIGN PATTERN IMPLEMENTED FOR PI PROGRAM - False sharing avoided with critical section
 
 #include <stdio.h>
 #include <omp.h>
