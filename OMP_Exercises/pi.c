@@ -17,6 +17,7 @@ History: Written by Tim Mattson, 11/99.
 #include <omp.h>
 static long num_steps = 1000000;
 double step;
+int e;
 int main ()
 {
 	  int i;
@@ -35,10 +36,5 @@ int main ()
 
 	  pi = step * sum;
 	  run_time = omp_get_wtime() - start_time;
-	  printf("\n pi with %d steps is %f in %f seconds ",num_steps,pi,run_time);
-}	  
-
-
-
-
-
+	  printf("%ld;%f;%f\n", num_steps, pi, run_time);
+}
